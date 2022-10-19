@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
             newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
             recyclerView.adapter=adapter
-            recyclerView.layoutManager=GridLayoutManager(this@MainActivity,2)
+            recyclerView.layoutManager=GridLayoutManager(this@MainActivity,3)
 
         }
     }
