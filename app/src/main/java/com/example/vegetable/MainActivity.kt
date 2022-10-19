@@ -2,7 +2,9 @@ package com.example.vegetable
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.GridLayout
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.vegetable.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,18 +17,18 @@ class MainActivity : AppCompatActivity() {
         with(binding){
             newArrayList= ArrayList()
             adapter= Adapter(newArrayList,this@MainActivity)
-            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"),
-                VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh")
-            )
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))
+            recyclerView.adapter=adapter
+            recyclerView.layoutManager=GridLayoutManager(this@MainActivity,2)
+
         }
     }
 }
