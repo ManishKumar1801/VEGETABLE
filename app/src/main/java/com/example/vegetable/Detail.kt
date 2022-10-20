@@ -19,7 +19,13 @@ class Detail : AppCompatActivity() {
                 imagevalue=bundle.getInt("image")
             }
             image.setImageResource(imagevalue)
-            val name=intent.getStringExtra("name")
+            val title=intent.getStringExtra("heading")
+            val cost=intent.getStringExtra("cost")
+            val description=intent.getStringExtra("description")
+            vegHeading.text=title
+            textView3.text=cost
+            textView4.text=description
+
 
         }
     }

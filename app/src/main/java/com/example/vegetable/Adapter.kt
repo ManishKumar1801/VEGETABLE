@@ -1,12 +1,14 @@
 package com.example.vegetable
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.rcv.Detail
 import com.google.android.material.imageview.ShapeableImageView
 
 class Adapter(private val vegList:ArrayList<VEG>,private val context: Context):
@@ -21,6 +23,14 @@ class Adapter(private val vegList:ArrayList<VEG>,private val context: Context):
         holder.titleImage.setImageResource(currentItem.titleImage)
         holder.vegHeading.text=currentItem.heading
         holder.cost.text=currentItem.cost
+        holder.titleImage.setOnClickListener{
+            val intent= Intent(context, Detail::class.java)
+            intent.putExtra("image",currentItem.titleImage)
+            intent.putExtra("heading",currentItem.heading)
+            intent.putExtra("cost",currentItem.cost)
+            intent.putExtra("description",currentItem.description)
+            context.startActivity(intent)
+        }
 
 
     }
