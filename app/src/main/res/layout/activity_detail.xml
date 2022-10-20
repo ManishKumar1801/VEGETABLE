@@ -107,7 +107,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="29dp"
                     android:text="Product detail"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
