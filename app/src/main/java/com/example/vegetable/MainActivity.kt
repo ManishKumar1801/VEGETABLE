@@ -1,5 +1,6 @@
 package com.example.vegetable
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.GridLayout
@@ -9,12 +10,17 @@ import com.example.vegetable.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
+
     private lateinit var newArrayList:ArrayList<VEG>
     private lateinit var adapter: Adapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= DataBindingUtil. setContentView(this,R.layout.activity_main)
         with(binding){
+            Add.setOnClickListener{
+                val intent=Intent(this@MainActivity,AddVeg::class.java)
+                startActivity(intent)
+            }
             newArrayList= ArrayList()
             adapter= Adapter(newArrayList,this@MainActivity)
             newArrayList.add(VEG(R.drawable.img,"Baigan","₹20","xgysfdgdh"))

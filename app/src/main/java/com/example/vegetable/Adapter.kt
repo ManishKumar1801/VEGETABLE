@@ -23,6 +23,7 @@ class Adapter(private val vegList:ArrayList<VEG>,private val context: Context):
         holder.titleImage.setImageResource(currentItem.titleImage)
         holder.vegHeading.text=currentItem.heading
         holder.cost.text=currentItem.cost
+        holder.quantity.text=currentItem.quantity
         holder.titleImage.setOnClickListener{
             val intent= Intent(context, Detail::class.java)
             intent.putExtra("image",currentItem.titleImage)
@@ -43,6 +44,7 @@ class Adapter(private val vegList:ArrayList<VEG>,private val context: Context):
         val titleImage: ImageView =itemView.findViewById(R.id.title_image)
         val vegHeading: TextView=itemView.findViewById(R.id.vegHeading)
         val cost:TextView=itemView.findViewById(R.id.cost)
+        val quantity:TextView=itemView.findViewById(R.id.quantity)
     }
 
 }
