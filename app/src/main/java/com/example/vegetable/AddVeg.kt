@@ -32,11 +32,10 @@ class AddVeg : AppCompatActivity() {
             dataBase= FirebaseFirestore.getInstance()
 
             dataBase.collection("vegitable").document().set(model).addOnSuccessListener {
-                Toast.makeText(this@AddVeg, "succecfully add", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@AddVeg, "successfully add", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener {
                 Toast.makeText(this@AddVeg, "something Went wrong", Toast.LENGTH_SHORT).show()
             }
-
 
         }
     }
