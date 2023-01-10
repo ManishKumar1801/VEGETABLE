@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.rcv.Detail
-import com.google.android.material.imageview.ShapeableImageView
 
 class Adapter(private val vegList:ArrayList<VEG>,private val context: Context):
     RecyclerView.Adapter<Adapter.MyViewHolder>() {
@@ -32,8 +30,6 @@ class Adapter(private val vegList:ArrayList<VEG>,private val context: Context):
             intent.putExtra("description",currentItem.description)
             context.startActivity(intent)
         }
-
-
     }
 
     override fun getItemCount(): Int {

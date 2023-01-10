@@ -1,4 +1,4 @@
-package com.example.rcv
+package com.example.vegetable
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
